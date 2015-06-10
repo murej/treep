@@ -6,6 +6,8 @@
     "normalize.css": "~3.0.3",
     "jeet": "~6.1.2",
     "canvg-gabelerner": "*",
-    "raphael": "~2.1.4"
+    "raphael": "~2.1.4",
+    "FileSaver": "*",
+    "canvas-toBlob.js": "~0.1.3"
   }
 }

@@ -9,9 +9,9 @@ function uploadMedia(filename, blob) {
     dataType: 'html',
     processData: false,
     data: blob,
-    success: function(data) {
-        console.log(data);
-    },
+    // success: function(data) {
+    //     console.log(data);
+    // },
     error: function(jqXHR, textStatus, errorThrown ) {
         console.log("Error when uploading file: " + textStatus + " because:" + errorThrown);
     }

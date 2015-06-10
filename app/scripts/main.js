@@ -9,11 +9,12 @@ function uploadMedia(filename, blob) {
     dataType: 'html',
     processData: false,
     data: blob,
-    // success: function(data) {
-    //     console.log(data);
-    // },
+    success: function(data) {
+      window.saveAs(blob, "treep.png");
+    },
     error: function(jqXHR, textStatus, errorThrown ) {
-        console.log("Error when uploading file: " + textStatus + " because:" + errorThrown);
+      window.saveAs(blob, "treep.png");
+      console.log("Error when uploading file: " + textStatus + " because:" + errorThrown);
     }
   });
 }
@@ -417,7 +418,7 @@ $(document).ready(function() {
     var filename = Date.now() + ".png";
     var blob = generateLink();
 
-    window.saveAs(blob, "treep.png");
+    $("div#saved span").remove();
     uploadMedia(filename, blob);
 	});
 });
